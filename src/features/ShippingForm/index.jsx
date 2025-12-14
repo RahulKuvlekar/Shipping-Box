@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useShippingDataStore } from "@/store/useShippingDataStore";
+import { toast } from "react-hot-toast";
 
 const COUNTRY_MULTIPLIERS = {
   Sweden: 7.35,
@@ -110,7 +111,7 @@ const ShippingForm = () => {
       if (!response.ok) throw new Error("Failed to save data");
       return await response.json();
     } catch (error) {
-      console.error("Error saving shipping data:", error);
+      console.log("Something went wrong:", error);
       throw error;
     }
   };
@@ -119,16 +120,15 @@ const ShippingForm = () => {
     try {
       const savedData = await saveShippingData(data);
       addShippingData(savedData);
-      alert("Shipping data saved successfully!");
+      toast.success("Shipping data saved successfully!");
       reset({
         receiverName: "",
         weight: "",
         boxColour: "#000000",
         destinationCountry: "",
       });
-    } catch (error) {
-      alert("Failed to save shipping data. Please try again.");
-      console.error(error);
+    } catch {
+      toast.error("Failed to save shipping data. Please try again.");
     }
   };
 

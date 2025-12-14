@@ -32,7 +32,6 @@ const DetailsTable = () => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error("Error getting shipping data:", error);
       setError(error);
     } finally {
       setStatus("completed");
