@@ -1,14 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router";
+import { cn } from "@/lib/utils";
 
 const NavigationBarItem = ({ to, label }) => {
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
-        isActive
-          ? "bg-primary text-white p-2 rounded-md text-sm md:text-base"
-          : "p-2 rounded-md text-sm md:text-base"
+        cn(
+          "p-2 rounded-md text-sm md:text-base",
+          isActive && "bg-primary text-white"
+        )
       }
     >
       {label}
