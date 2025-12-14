@@ -1,16 +1,61 @@
-# React + Vite
+# Shipping Box
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application built with Vite for managing shipping information and details.
 
-Currently, two official plugins are available:
+## Repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[GitHub Repository](https://github.com/RahulKuvlekar/Shipping-Box)
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Live Application](https://recruiterflow-rahulkuvlekar.netlify.app/)
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Node.js**: Version 24 LTS or higher
+- **npm** package manager
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/RahulKuvlekar/Shipping-Box.git
+cd Shipping-Box
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+### 4. Build for Production
+
+```bash
+npm run build
+```
+
+### 5. Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Tech Stack
+
+- **React** - UI library
+- **Vite** - Build tool and dev server
+- **React Router** - Routing
+- **Zustand** - State management
+- **React Hook Form** - Form handling
+- **Zod** - Schema validation
+- **Tailwind CSS** - Styling
